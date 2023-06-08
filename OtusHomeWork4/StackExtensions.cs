@@ -14,7 +14,7 @@ namespace OtusHomeWork4
             {
                 int sizeStack = stack2.Size();
 
-                for (int i = 0; i <= sizeStack - 1; i++)
+                for (int i = 0; i < sizeStack; i++)
                 {
                     stack1.Add(stack2.Pop());
                 }

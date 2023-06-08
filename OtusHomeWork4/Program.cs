@@ -74,6 +74,9 @@ internal class Program
         var snew = new StackClass("a", "b", "c");
         snew.Merge(new StackClass("1", "2", "3"));
         PrintStack(snew);
+
+        var stackConcat = StackClass.Concat(new StackClass("a", "b", "c"), new StackClass("1", "2", "3"), new StackClass("А", "Б", "В"), new StackClass("А", "Б", "В"), new StackClass("А", "Б", "В"));
+        PrintStack(stackConcat);
         static void PrintStack(StackClass s)
         {
             s.Print();

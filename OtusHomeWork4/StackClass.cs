@@ -62,5 +62,21 @@
                 Console.WriteLine(item.ToString());
             }
         }
+        public static StackClass Concat(params StackClass[] objs)
+        {
+            StackClass stacktemp1 = objs[0];
+            int sizeStack = stacktemp1.Size();
+            StackClass stacktemp = new StackClass() ;
+            for (int i = 0; i < sizeStack; i++)
+            {
+                stacktemp.Add(stacktemp1.Pop());
+            }
+
+            for (int i = 1; i < objs.Length; i++)
+            {
+                stacktemp.Merge(objs[i]);
+            }
+            return stacktemp;
+        }
     }
 }
